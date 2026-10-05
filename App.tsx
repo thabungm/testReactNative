@@ -11,6 +11,7 @@ import {
   SafeAreaProvider,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
+import GreetingBanner from './src/components/GreetingBanner';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -28,6 +29,7 @@ function AppContent() {
 
   return (
     <View style={styles.container}>
+      <GreetingBanner name="HubLaunch" />
       <NewAppScreen
         templateFileName="App.tsx"
         safeAreaInsets={safeAreaInsets}
