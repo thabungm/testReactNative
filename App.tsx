@@ -11,6 +11,8 @@ import {
   SafeAreaProvider,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
+import AppVersionLabel from './src/components/AppVersionLabel';
+import { version } from './package.json';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -32,6 +34,7 @@ function AppContent() {
         templateFileName="App.tsx"
         safeAreaInsets={safeAreaInsets}
       />
+      <AppVersionLabel version={version} />
     </View>
   );
 }
